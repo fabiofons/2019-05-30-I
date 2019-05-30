@@ -57,13 +57,13 @@ function Auto() {
 }
 
 Auto.prototype.acelerar = function(acc) {
-  this.velocidad += acc;
+  return this.velocidad += acc;
 };
 
 Auto.prototype.frenar = function(decrease) {
-  this.velocidad -= decrease;
   if(this.velocidad < 0) {
-    this.velocidad = 0;
-  }
+    return this.velocidad = 0;
+  }  
+  return this.velocidad -= decrease;
 };
 ```
